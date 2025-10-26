@@ -196,13 +196,13 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Agende Seu Serviço</h2>
                 <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-                    Preencha o formulário abaixo e clique em "Enviar Agendamento". Os dados serão enviados por e-mail para **macnativa@gmail.com** através de um serviço de formulários externo.
-                    <strong class="text-red-500 block mt-2">ATENÇÃO: Este formulário requer configuração de backend (ex: Formspree, Netlify Forms) para funcionar de fato. Por favor, configure a ação `action` para o seu endpoint.</strong>
+                    Preencha o formulário abaixo e clique em "Enviar Agendamento". Os dados serão enviados por e-mail para **macnativa@gmail.com** através do serviço Formspree.
+                    <strong class="text-green-600 block mt-2">CONFIGURAÇÃO ATUALIZADA: O formulário está configurado para o endpoint Formspree: `https://formspree.io/f/mwpwpvkk`</strong>
                 </p>
 
                 <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-accent">
                     <!-- Configurado para envio real via POST (requer backend) -->
-                    <form action="https://formspree.io/f/f-seu-id-formspree" method="POST" class="space-y-6">
+                    <form action="https://formspree.io/f/mwpwpvkk" method="POST" class="space-y-6">
                         <!-- Campo obrigatório do Formspree para especificar o destinatário -->
                         <input type="hidden" name="_subject" value="Novo Agendamento BROUP de Manutenção">
                         <input type="hidden" name="_to" value="macnativa@gmail.com">
