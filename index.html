@@ -105,12 +105,10 @@
                 </div>
 
                 <!-- Imagem Placeholder --><div class="md:w-1/2 flex justify-center">
-                    <!-- AQUI você incluirá a imagem do seu logo --><img src="logo_broup.png" alt="Logo da BROUP Serviços" class="w-full max-w-sm h-auto rounded-xl shadow-xl object-contain">
-                    <!-- Opcional: manter o div para o fundo, mas a imagem fica por cima/dentro --><!-- <div class="bg-gray-300 w-full max-w-sm h-64 md:h-80 rounded-xl shadow-xl flex items-center justify-center text-gray-600 text-center p-4">
-                        <span class="font-semibold text-lg">
-                           [Imagem de Técnico de Manutenção Trabalhando]
-                        </span>
-                    </div> --></div>
+                    <!-- Placeholder para o Logo da BROUP -->
+                    <img src="https://placehold.co/400x200/2563EB/ffffff?text=BROUP+Logo+Aqui" onerror="this.onerror=null;this.src='https://placehold.co/400x200/2563EB/ffffff?text=BROUP+Logo+Aqui'" alt="Logo da BROUP Serviços" class="w-full max-w-sm h-auto rounded-xl shadow-xl object-contain">
+                    
+                </div>
             </div>
         </section>
 
@@ -197,30 +195,36 @@
         <!-- Seção de Contato e Formulário de Agendamento --><section id="contato" class="section-padding bg-white">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Agende Seu Serviço</h2>
-                <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-12">
-                    Preencha o formulário abaixo e entraremos em contato o mais rápido possível para confirmar seu agendamento. (O envio será processado e encaminhado para **macnativa@gmail.com**)
+                <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                    Preencha o formulário abaixo e clique em "Enviar Agendamento". Os dados serão enviados por e-mail para **macnativa@gmail.com** através de um serviço de formulários externo.
+                    <strong class="text-red-500 block mt-2">ATENÇÃO: Este formulário requer configuração de backend (ex: Formspree, Netlify Forms) para funcionar de fato. Por favor, configure a ação `action` para o seu endpoint.</strong>
                 </p>
 
                 <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-accent">
-                    <form id="agendamento-form" class="space-y-6">
+                    <!-- Configurado para envio real via POST (requer backend) -->
+                    <form action="https://formspree.io/f/f-seu-id-formspree" method="POST" class="space-y-6">
+                        <!-- Campo obrigatório do Formspree para especificar o destinatário -->
+                        <input type="hidden" name="_subject" value="Novo Agendamento BROUP de Manutenção">
+                        <input type="hidden" name="_to" value="macnativa@gmail.com">
+                        
                         <!-- Nome Completo --><div>
                             <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                            <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            <input type="text" id="nome" name="Nome Completo" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
                         </div>
 
                         <!-- Telefone --><div>
                             <label for="telefone" class="block text-sm font-medium text-gray-700 mb-1">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150" placeholder="(XX) XXXXX-XXXX">
+                            <input type="tel" id="telefone" name="Telefone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150" placeholder="(XX) XXXXX-XXXX">
                         </div>
 
-                        <!-- E-mail --><div>
+                        <!-- E-mail (Importante para o _replyto) --><div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            <input type="email" id="email" name="_replyto" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
                         </div>
 
                         <!-- Tipo de Serviço --><div>
                             <label for="tipo_servico" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Serviço</label>
-                            <select id="tipo_servico" name="tipo_servico" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 appearance-none bg-white">
+                            <select id="tipo_servico" name="Tipo de Serviço" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 appearance-none bg-white">
                                 <option value="" disabled selected>Selecione um serviço</option>
                                 <option value="eletrica">Elétrica</option>
                                 <option value="hidraulica">Hidráulica</option>
@@ -233,17 +237,17 @@
                         <!-- Data e Horário Desejado --><div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div>
                                 <label for="data_desejada" class="block text-sm font-medium text-gray-700 mb-1">Data Desejada</label>
-                                <input type="date" id="data_desejada" name="data_desejada" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                                <input type="date" id="data_desejada" name="Data Desejada" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
                             </div>
                             <div>
                                 <label for="horario_desejado" class="block text-sm font-medium text-gray-700 mb-1">Horário Desejado</label>
-                                <input type="time" id="horario_desejado" name="horario_desejado" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                                <input type="time" id="horario_desejado" name="Horário Desejado" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
                             </div>
                         </div>
 
                         <!-- Observações Adicionais --><div>
                             <label for="observacoes" class="block text-sm font-medium text-gray-700 mb-1">Observações Adicionais</label>
-                            <textarea id="observacoes" name="observacoes" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150" placeholder="Descreva o problema ou o que precisa ser feito."></textarea>
+                            <textarea id="observacoes" name="Observações" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150" placeholder="Descreva o problema ou o que precisa ser feito."></textarea>
                         </div>
 
                         <!-- Botão de Envio --><div>
@@ -252,16 +256,6 @@
                             </button>
                         </div>
                     </form>
-
-                    <!-- Mensagem de Confirmação (oculta por padrão) --><div id="success-message" class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg" role="alert">
-                        <p class="font-bold">Agendamento Solicitado!</p>
-                        <p class="text-sm">Obrigado! Sua solicitação foi enviada com sucesso. Entraremos em contato em breve para confirmar os detalhes.</p>
-                    </div>
-
-                    <!-- Mensagem de Erro (oculta por padrão) --><div id="error-message" class="hidden mt-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg" role="alert">
-                        <p class="font-bold">Erro no Agendamento</p>
-                        <p class="text-sm">Por favor, preencha todos os campos obrigatórios e tente novamente.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -355,52 +349,8 @@
             });
         });
 
-
-        // 2. Funcionalidade do Formulário de Agendamento
-        document.getElementById('agendamento-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impedir o envio padrão do formulário, pois esta é uma simulação
-
-            const successMessage = document.getElementById('success-message');
-            const errorMessage = document.getElementById('error-message');
-            
-            // Simulação de Validação (Apenas verifica se o campo de nome não está vazio)
-            const nome = document.getElementById('nome').value.trim();
-
-            if (nome === "") {
-                // Se falhar, exibe a mensagem de erro
-                successMessage.classList.add('hidden');
-                errorMessage.classList.remove('hidden');
-                console.error('Falha na submissão: Nome obrigatório.');
-            } else {
-                // Se bem-sucedido (simulação)
-                
-                // Monta o objeto de dados (apenas para logging)
-                const formData = {
-                    nome: document.getElementById('nome').value,
-                    telefone: document.getElementById('telefone').value,
-                    email: document.getElementById('email').value,
-                    tipo_servico: document.getElementById('tipo_servico').value,
-                    data_desejada: document.getElementById('data_desejada').value,
-                    horario_desejado: document.getElementById('horario_desejado').value,
-                    observacoes: document.getElementById('observacoes').value
-                };
-
-                // NOTA: Os dados coletados serão enviados para macnativa@gmail.com
-                // Você precisará integrar um serviço de backend (como Formspree, Netlify Forms ou seu próprio servidor)
-                // para que este POST funcione de verdade.
-                console.log('Dados do Agendamento Coletados, preparados para envio a macnativa@gmail.com:', formData);
-                
-                // Exibe a mensagem de sucesso
-                errorMessage.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-
-                // Limpa o formulário após 4 segundos e oculta a mensagem
-                setTimeout(() => {
-                    document.getElementById('agendamento-form').reset();
-                    successMessage.classList.add('hidden');
-                }, 4000);
-            }
-        });
+        // 2. A lógica de submissão do formulário é agora tratada pelo Formspree (ou similar)
+        // O JavaScript customizado de simulação foi removido para permitir o envio nativo.
 
         // 3. Atualização do Ano no Rodapé
         document.getElementById('current-year').textContent = new Date().getFullYear();
