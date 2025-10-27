@@ -44,6 +44,12 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
+        /* Estilo para a nova imagem de fundo */
+        .bg-tools-image {
+            background-image: url('https://raw.githubusercontent.com/Macnativa/broup-gmn/main/tools.jpg');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -97,16 +103,17 @@
                         Seu Parceiro Confiável em <span class="text-primary">Serviços Técnicos.</span>
                     </h1>
                     <p class="text-lg text-gray-600 mb-8">
-                        A BROUP é especialista em trazer excelência para sua casa ou empresa. Elétrica, hidráulica, serviços de "marido de aluguel" e manutenção de ar-condicionado com a máxima qualidade e segurança.
+                        A BROUP é especialista em trazer excelência para sua casa ou empresa. Elétrica, hidráulica, montagem e ar-condicionado com a máxima qualidade e segurança.
                     </p>
                     <a href="#contato" class="inline-block bg-accent hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
                         Solicite Seu Orçamento Agora
                     </a>
                 </div>
 
-                <!-- Imagem Placeholder --><div class="md:w-1/2 flex justify-center">
-                    <!-- Placeholder para o Logo da BROUP -->
-                    <img src="https://placehold.co/400x200/2563EB/ffffff?text=BROUP+Logo+Aqui" onerror="this.onerror=null;this.src='https://placehold.co/400x200/2563EB/ffffff?text=BROUP+Logo+Aqui'" alt="Logo da BROUP Serviços" class="w-full max-w-sm h-auto rounded-xl shadow-xl object-contain">
+                <!-- Imagem Placeholder -->
+                <div class="md:w-1/2 flex justify-center">
+                    <!-- LOGO REAL CARREGADO DO GITHUB -->
+                    <img src="https://raw.githubusercontent.com/Macnativa/broup-gmn/main/Logo-tp.jpg" onerror="this.onerror=null;this.src='https://placehold.co/400x200/2563EB/ffffff?text=BROUP+Logo+Aqui'" alt="Logo da BROUP Serviços" class="w-full max-w-sm h-auto rounded-xl shadow-xl object-contain">
                     
                 </div>
             </div>
@@ -147,15 +154,16 @@
                         <h3 class="text-xl font-bold text-center mb-3">Assinatura de Projetos Elétricos</h3>
                         <p class="text-gray-200 text-center text-sm">Revisão do projeto conforme normas NBR5410, NBR5444 e NR10. Serviço especializado para garantir a conformidade legal e técnica.</p>
                         <div class="mt-4 text-center">
+                            
                         </div>
                     </div>
                     
-                    <!-- Serviço 4: Montagem de Móveis --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
+                    <!-- Serviço 4: Marido de Aluguel (Antiga Montagem de Móveis) --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
                         <div class="flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4 mx-auto">
                             <!-- Ícone Tool (Montagem) --><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tool"><path d="M14.7 6.3l-2.4 2.4a.5.5 0 0 0-.1.3v.8l1.7 1.7-1.7 1.7v.8a.5.5 0 0 0-.1.3l-2.4 2.4M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
                         </div>
                         <h3 class="text-xl font-bold text-center mb-3">Marido de Aluguel</h3>
-                        <p class="text-gray-600 text-center text-sm">Montagem e desmontagem de móveis, pinturas e outros.</p>
+                        <p class="text-gray-600 text-center text-sm">Serviços gerais de reparos e manutenção para o lar, incluindo montagem e desmontagem profissional de móveis.</p>
                     </div>
 
                     <!-- Serviço 5: Ar-Condicionado --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
@@ -196,11 +204,11 @@
                         </div>
                     </div>
                     
-                    <!-- Imagem Placeholder --><div class="lg:w-1/2 flex justify-center">
-                        <div class="bg-gray-300 w-full max-w-md h-64 rounded-xl shadow-xl flex items-center justify-center text-gray-600 text-center p-4">
-                            <span class="font-semibold text-lg">
-                                [Imagem de Fundo - Ferramentas Organizadas]
-                            </span>
+                    <!-- Imagem de Fundo de Ferramentas -->
+                    <div class="lg:w-1/2 flex justify-center">
+                        <!-- Corrigido: Para garantir que a imagem de fundo seja visível, adicionamos a classe 'relative' e removemos o flex/justify/items-center desnecessário, confiando apenas no background CSS. -->
+                        <div class="bg-tools-image w-full max-w-md h-64 rounded-xl shadow-xl relative">
+                            <!-- O conteúdo vazio mantém a div na altura de 64 (h-64) -->
                         </div>
                     </div>
                 </div>
@@ -209,8 +217,9 @@
 
         <!-- Seção de Contato e Formulário de Agendamento --><section id="contato" class="section-padding bg-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Agende Seu Serviço</h2>
-                    <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-accent">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-12">Agende Seu Serviço</h2>
+                
+                <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-accent">
                     <!-- Configurado para envio real via POST (requer backend) -->
                     <form action="https://formspree.io/f/mwpwpvkk" method="POST" class="space-y-6">
                         <!-- Campo obrigatório do Formspree para especificar o destinatário -->
@@ -238,8 +247,8 @@
                                 <option value="" disabled selected>Selecione um serviço</option>
                                 <option value="eletrica">Elétrica</option>
                                 <option value="hidraulica">Hidráulica</option>
-                                <option value="projetos">Assinatura de Projetos Elétricos</option> <!-- NOVO SERVIÇO ADICIONADO -->
-                                <option value="moveis">Marido de Aluguel</option>
+                                <option value="projetos">Assinatura de Projetos Elétricos</option>
+                                <option value="aluguel">Marido de Aluguel</option> <!-- ALTERADO: Antigo 'Montagem de Móveis' -->
                                 <option value="ar_condicionado">Manutenção de Ar-Condicionado</option>
                                 <option value="outros">Outros</option>
                             </select>
