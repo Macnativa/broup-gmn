@@ -97,7 +97,7 @@
                         Seu Parceiro Confiável em <span class="text-primary">Serviços Técnicos.</span>
                     </h1>
                     <p class="text-lg text-gray-600 mb-8">
-                        A BROUP é especialista em trazer excelência para sua casa ou empresa. Elétrica, hidráulica, marido de aluguel e manutenção de ar-condicionado com a máxima qualidade e segurança.
+                        A BROUP é especialista em trazer excelência para sua casa ou empresa. Elétrica, hidráulica, montagem e ar-condicionado com a máxima qualidade e segurança.
                     </p>
                     <a href="#contato" class="inline-block bg-accent hover:bg-yellow-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
                         Solicite Seu Orçamento Agora
@@ -119,7 +119,9 @@
                     Oferecemos uma gama completa de soluções com técnicos qualificados para garantir o funcionamento perfeito do seu ambiente.
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Layout alterado para 3 colunas em desktop para melhor distribuição dos 5 serviços -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
                     <!-- Serviço 1: Elétrica --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
                         <div class="flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4 mx-auto">
                             <!-- Ícone Zap (Elétrica) --><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14s.7-1.2 2.6-2l6-4.2a.5.5 0 0 1 .5.8l-5.6 3.9M10 2l-6 12h5l-1 8 6-12h-5l1-8Z"/></svg>
@@ -136,21 +138,35 @@
                         <p class="text-gray-600 text-center text-sm">Reparos de vazamentos, troca de torneiras e registros, desentupimentos simples e manutenção de caixas d'água.</p>
                     </div>
 
-                    <!-- Serviço 3: Montagem de Móveis --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
+                    <!-- NOVO SERVIÇO 3: Assinatura de Projetos Elétricos (DESTAQUE) -->
+                    <div class="lg:col-span-1 p-6 bg-primary text-white rounded-xl shadow-2xl card-hover-effect border-t-4 border-accent transform scale-[1.03] hover:scale-105 transition duration-300">
+                        <div class="flex items-center justify-center w-16 h-16 bg-accent rounded-full mb-4 mx-auto shadow-lg">
+                            <!-- Ícone FileText (Projetos) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text text-white"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.414A2 2 0 0 0 16.586 6L14 3.414A2 2 0 0 0 12.586 2H15z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/><path d="M10 20h4"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-3">Assinatura de Projetos Elétricos</h3>
+                        <p class="text-gray-200 text-center text-sm">Revisão do projeto conforme normas NBR5410, NBR5444 e NR10. Serviço especializado para garantir a conformidade legal e técnica.</p>
+                        <div class="mt-4 text-center">
+                            <span class="inline-block bg-accent text-primary text-xs font-bold px-3 py-1 rounded-full uppercase shadow-md">Destaque</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Serviço 4: Montagem de Móveis --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
                         <div class="flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4 mx-auto">
                             <!-- Ícone Tool (Montagem) --><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tool"><path d="M14.7 6.3l-2.4 2.4a.5.5 0 0 0-.1.3v.8l1.7 1.7-1.7 1.7v.8a.5.5 0 0 0-.1.3l-2.4 2.4M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
                         </div>
-                        <h3 class="text-xl font-bold text-center mb-3">Marido de Aluguel</h3>
-                        <p class="text-gray-600 text-center text-sm">Montagem e desmontagem todos os tipos de móveis e serviços em geral.</p>
+                        <h3 class="text-xl font-bold text-center mb-3">Montagem de Móveis</h3>
+                        <p class="text-gray-600 text-center text-sm">Montagem e desmontagem profissional de todos os tipos de móveis, garantindo estabilidade e durabilidade.</p>
                     </div>
 
-                    <!-- Serviço 4: Ar-Condicionado --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
+                    <!-- Serviço 5: Ar-Condicionado --><div class="p-6 bg-gray-50 rounded-xl shadow-lg card-hover-effect border-t-4 border-primary">
                         <div class="flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4 mx-auto">
                             <!-- Ícone Snowflake (AC) --><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-snowflake"><path d="M2.5 17.5l2.7-2.7a2 2 0 0 1 2.8 0L12 19l4-4.5a2 2 0 0 1 2.8 0l2.7 2.7m-20-11l2.7 2.7a2 2 0 0 0 2.8 0L12 5l4 4.5a2 2 0 0 0 2.8 0l2.7-2.7M12 2v6m-4 12v-6m-4-6h6m12 0h-6m4-4h-6m-12 0h6m-4 12h6m12 0h-6m4-4v-6m-4-12v6"/></svg>
                         </div>
                         <h3 class="text-xl font-bold text-center mb-3">Ar-Condicionado</h3>
                         <p class="text-gray-600 text-center text-sm">Instalação, limpeza e manutenção preventiva/corretiva de splits e aparelhos de janela, otimizando a performance.</p>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -196,7 +212,9 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-gray-900 mb-4">Agende Seu Serviço</h2>
                 <p class="text-center text-lg text-gray-600 max-w-2xl mx-auto mb-6">
-                    Preencha o formulário abaixo e clique em "Enviar Agendamento". </p>
+                    Preencha o formulário abaixo e clique em "Enviar Agendamento". Os dados serão enviados por e-mail para **macnativa@gmail.com** através do serviço Formspree.
+                    <strong class="text-green-600 block mt-2">CONFIGURAÇÃO ATUALIZADA: O formulário está configurado para o endpoint Formspree: `https://formspree.io/f/mwpwpvkk`</strong>
+                </p>
 
                 <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl border-t-8 border-accent">
                     <!-- Configurado para envio real via POST (requer backend) -->
@@ -226,7 +244,8 @@
                                 <option value="" disabled selected>Selecione um serviço</option>
                                 <option value="eletrica">Elétrica</option>
                                 <option value="hidraulica">Hidráulica</option>
-                                <option value="moveis">Marido de Aluguel</option>
+                                <option value="projetos">Assinatura de Projetos Elétricos</option> <!-- NOVO SERVIÇO ADICIONADO -->
+                                <option value="moveis">Montagem de Móveis</option>
                                 <option value="ar_condicionado">Manutenção de Ar-Condicionado</option>
                                 <option value="outros">Outros</option>
                             </select>
@@ -287,7 +306,7 @@
                         <span class="font-medium text-white">E-mail:</span> contato@broup.com.br
                     </p>
                     <p class="text-gray-400">
-                        <span class="font-medium text-white">Localização:</span> Campinas / SP
+                        <span class="font-medium text-white">Endereço:</span> Rua da Excelência, 123 - Cidade/UF
                     </p>
                 </div>
 
